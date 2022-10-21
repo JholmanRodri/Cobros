@@ -38,7 +38,7 @@ const usuarioPut=async(req,res)=>{
         msg:`Actualizacion exitosa ${usuario}`
     })
 }   
-
+   
 const usuarioLogin= async (req, res) => {
     const { email } = req.body;
     try {
