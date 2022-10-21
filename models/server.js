@@ -36,7 +36,7 @@ class Servidor {
     this.app.use("/cobros/usuarios", usuarios);
     this.app.use("/cobros/prestamo", prestamo);
   }
-  escuchar() {
+  listen() {
     this.app.listen(this.port, () => {
       console.log(`Servidor escuchando por el puerto ${this.port}`);
     });
