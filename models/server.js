@@ -29,8 +29,8 @@ class Server {
       })
     );
   }
-  async connectarbd() {
-    await dbConnection();
+  async connectarbd(){
+    await dbConnection()
   }
   routes() {
     this.app.use("/cobros/usuarios", usuarios);
