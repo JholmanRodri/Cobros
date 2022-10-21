@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import bdconectar from "../database/config.js";
+import {bdconectar} from "../database/config.js";
 // import peliculas from "../routes/peliculas.js";
 import usuarios from "../routes/usuarios.js";
 import prestamo from "../routes/prestamo.js";
