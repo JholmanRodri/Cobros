@@ -9,4 +9,4 @@ const bdconectar=async()=>{
     }
     
 }
-export default bdconectar
+export default {bdconectar}
