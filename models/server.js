@@ -9,7 +9,7 @@ import prestamo from "../routes/prestamo.js";
 // import comentarios from "../routes/comentarios.js";
 import fileUpload from "express-fileupload";
 
-class Servidor {
+class Server {
   constructor() {
     this.app = express();
     this.middlewares();
@@ -43,4 +43,4 @@ class Servidor {
   }
 }
 
-export default Servidor;
+export default Server;
