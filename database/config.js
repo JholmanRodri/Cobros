@@ -7,6 +7,5 @@ const dbConnection=async()=>{
     } catch (error) {
         throw new Error("Error al iniciar la base de datos")
     }
-    
 }
 export {dbConnection}
