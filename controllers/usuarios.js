@@ -1,4 +1,3 @@
-
 import Usuario from "../models/usuarios.js"
 import {generarJWT} from "../middlewares/Validar-jwt.js"
 
@@ -7,7 +6,8 @@ const usuarioPost=async(req,res)=>{
     const usuario= new Usuario({nombre,apellidos,cedula,telefono,direccion})
     await usuario.save()
     res.json({
-        msg:`El usuario ${usuario.nombre} se a registrado con exito`
+        msg:`El usuario ${usuario.nombre} se a registrado con exito`,
+        usuario
     })
 }
 
