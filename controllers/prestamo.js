@@ -1,5 +1,4 @@
 import Prestamo from "../models/prestamo.js"
-
 const PrestamoPost=async(req,res)=>{
     const{usuario,deuda,interes,tiempo}=req.body
     const prestamo=new Prestamo({usuario,deuda,interes,tiempo})
@@ -8,6 +7,8 @@ const PrestamoPost=async(req,res)=>{
         prestamo
     })
 }
+//tasa de pago
+
 const PrestamoPut=async(req,res)=>{
     const{id}=req.params
     const{usuario,deuda,interes,tiempo}=req.body
@@ -39,6 +40,7 @@ const PrestamoGetBuscar=async(req,res)=>{
         prestamo
     })
 }
+
 const PrestamoDesactivar=async(req,res)=>{
     const {id}=req.params
     const desactivar =await Prestamo.findByIdAndUpdate(id,{estado:0})
@@ -46,6 +48,7 @@ const PrestamoDesactivar=async(req,res)=>{
         "msg":"Usuario desactivado con exito"
     })
 }
+
 const PrestamoActivar=async(req,res)=>{
     const {id}=req.params
     const desactivar =await Prestamo.findByIdAndUpdate(id,{estado:1})
