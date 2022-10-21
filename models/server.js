@@ -7,27 +7,24 @@ import prestamo from "../routes/prestamo.js";
 // import favoritos from "../routes/favoritos.js";
 // import actores from "../routes/actores.js";
 // import comentarios from "../routes/comentarios.js";
-import fileUpload from "express-fileupload";
+import fileupload from "express-fileupload";
 
 class Server {
   constructor() {
-    this.app = express();
+    this.app=express();
     this.middlewares();
-    this.port = process.env.PORT;
-    this.connectarbd();
-    this.routes();
+    this.port=process.env.PORT;
+    this.connectarbd()
+    this.routes() 
   }
   middlewares() {
     this.app.use(express.json());
     this.app.use(cors());
-
-    this.app.use(
-      fileUpload({
-        useTempFiles: true,
-        tempFileDir: "/tmp/",
-        createParentPath: true,
-      })
-    );
+    this.app.use(fileupload({
+        useTempFiles:true,
+        tempFileDir:'/tmp/',
+        createParentPath:true
+    }));
   }
   async connectarbd(){
     await dbConnection()
@@ -43,4 +40,4 @@ class Server {
   }
 }
 
-export default Server;
+export default Server
